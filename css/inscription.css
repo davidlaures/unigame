@@ -1,0 +1,147 @@
+
+/*====================================
+  STYLE CADRE CENTRAL INSCRIPTION
+====================================*/
+
+
+.frame {
+  width: 500px;
+  margin: auto;
+  background-color: rgba(253,18,18,0.7);
+  padding: 60px;
+  line-height: 30px;
+  color: white;
+}
+
+.letter input {
+  width: 300px;
+}
+
+.letter {
+  width: 80%;
+  margin: auto;
+}
+
+
+
+/*====================================
+ BOUTON "CRÉER MON COMPTE" 
+ ====================================*/
+
+*, *:after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bouton a {
+  position: relative;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 100;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 12px;
+  margin: auto;
+}
+
+.bouton a:hover,
+.bouton a:focus {
+  outline: none;
+  color: #fff;
+}
+
+.bouton a {
+  line-height: 35px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.bouton a span {
+  position: relative;
+  display: inline-block;
+  padding: 0 14px;
+  background: #fd1212;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+.csstransforms3d .bouton a span::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #b70101;
+  content: attr(data-hover);
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+}
+
+.bouton a:hover span,
+.bouton a:focus span {
+  -webkit-transform: rotateX(90deg) translateY(-22px);
+  -moz-transform: rotateX(90deg) translateY(-22px);
+  transform: rotateX(90deg) translateY(-22px);
+}
+
+.csstransforms3d .bouton a:hover span::before,
+.csstransforms3d .bouton a:focus span::before {
+  background: #fd1212;  
+}
+
+
+button {
+  padding: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.click {
+  display: inline;
+  width: 80%;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.click input {
+  margin-left: 40px;
+}
+
+.cocher {
+  padding-top: 50px;
+}
+
+
+
+/* FOOTER */
+footer {
+  background-color: white;
+  display: block;
+  height: 100px;
+  padding: 2.6em 0 0;
+  width:100%;
+  text-align: center;
+}

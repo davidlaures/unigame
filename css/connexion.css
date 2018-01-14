@@ -1,0 +1,228 @@
+
+/* Classes */
+  @font-face {
+    font-family: MyriadPro;
+  }
+
+
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+/*====================================
+	BASE STYLES
+====================================*/
+
+body {
+  background: white; 
+font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;  font-size: 1em;
+font-weight: lighter;
+  }
+
+
+* {
+font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;  font-size: 1em; 
+}
+
+/*====================================
+  MENU STYLES
+====================================*/
+header {
+  background: #fff;
+  box-shadow: 0px -3px 15px 2px;
+  }
+
+.header-container {
+  width: 100%;
+  margin: auto; 
+  display: flex;
+  flex-direction: column; /* Logo starts stacked on top of nav */
+  align-items: center;
+}
+  
+.logo {
+  max-width: 120px;
+  max-height: 120px; 
+  margin-top: -20%;
+}
+
+
+/*====================================
+  MENU STYLES
+====================================*/
+
+.main-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 25px; 
+  overflow: visible;
+  
+  max-width: 700px;  
+}
+
+.main-menu a {
+    text-align: center;
+    padding: .75em 1em;
+    display: block;
+    color: #222;
+    border-bottom: none !important; 
+}
+
+.main-menu a:hover {
+      color: red;
+      border-bottom-color: #c14400; 
+}
+/*
+  MEDIA QUERIES
+====================================*/
+
+@media (min-width: 550px) {
+  
+  
+    /*====================================
+      DROP-MENU EFFECTS (LARGER SCREENS)
+    ====================================*/
+    /* Resets dropdown styles to not affect the effects. Overflow still set to hidden allows for menu effects like sliding in */
+      .effect {
+        transition: max-height 0s;
+        opacity: 1;
+        background: transparent;
+      }
+      .effect .menu-button {
+        transform: translateY(0%); 
+      }
+
+
+      .scissor .menu-button{
+        transform: translateX(-100%);
+      }
+
+  .header-container {
+    width: 90%;
+  }
+
+  .header-container {
+    height: 200px;
+    justify-content: space-between; /* Pushes logo to top, nav bar all the way down */
+  } 
+  
+  .main-menu {   
+    flex-direction: row; /* Horizontal main menu buttons */
+    align-items: flex-start; /* Makes the top of the 'dropdown-wrapper' div stay flush with button top because it's aligned on the cross-axis */
+    height: 48px; /* Setting the height allows the dropdown outside of it's parent's bounds, therefore not compensated for by the flex. */
+    margin: 0;
+  }
+    
+  .main-menu > .menu-button {
+    width: 23%;
+    max-width: 150px;
+  }
+
+  .logo {
+    max-width: 130px;
+    max-height: 130px;
+    margin-top: -30%; 
+  }
+
+}
+
+@media (min-width: 850px) {
+
+  .header-container {
+    flex-direction: row; /* Places logo on the same line as .main-menu */
+    justify-content: space-around; 
+    height: 160px;
+	} 
+
+  .main-menu {
+ 		width: 60%;
+  	justify-content: space-between;
+  }
+
+  .logo {
+    margin: -50%;
+  }
+
+}
+
+/*====================================
+  BOXE CENTRALE
+====================================*/
+
+#containt {
+  margin-top: 80px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h1::first-letter {
+  color: #c14400;
+}
+
+.box {
+  background-color: white;
+  border-style: solid;
+  border-color: #71c6d3;
+  border-width: 2px;
+  padding: 20px;
+  float: center;
+  text-align: justify;
+  line-height: 30px;
+
+}
+
+.boxeco {
+  background-color: white;
+  border-style: solid;
+  border-color: #71c6d3;
+  border-width: 2px;
+  padding: 20px;
+  float: center;
+  text-align: center;
+  line-height: 30px;
+}
+
+.password {
+  margin-left: 10px;
+}
+
+button::first-letter {
+  color: #c14400;
+}
+
+button {
+  letter-spacing: 3px;
+  padding: 5px;
+  border-radius: 10px;
+
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+/* FOOTER */
+
+
+footer {
+  background-color: white;
+  display: block;
+  height: 100px;
+  padding: 2.6em 0 0;
+  width:100%;
+  text-align: center;
+}
